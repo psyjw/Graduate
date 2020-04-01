@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8D98FF</color>
+    <!--<color name="colorPrimary">#008577</color>-->
+    <color name="colorPrimaryDark">#8D98FF</color>
+    <color name="colorAccent">#8D98FF</color>
+
+    <!--对底部导航栏两种状态图标的颜色设计-->
+    <color name="item_selected">#8D98FF</color>
+    <color name="item_not_selected">#757575</color>
+
+    <color name="colorFloatingButton">#8D98FF</color>
+    <color name="colorfirst">#8D98FF</color>
+    <color name="colorfirsr_1">#8D98FF</color>
+    <color name="colorfirst_2">#8D98FF</color>
+    <color name="colorfirst_3">#FFFFFF</color>
+    <color name="colorfirst_4">#FFFFFF</color>
+
+    <color name="colorFloatingButton1">#8D98FF</color>
+    <color name="colorFloatingButton2">#FFFFFF</color>
+    <color name="colorFloatingButton3">#8D98FF</color>
+    <color name="colorFloatingButton4">#FFFFFF</color>
+
+    <color name="colortagtext">#ffff</color>
+    <color name="colorFloatingButton_press">#8D98FF</color>
+
+    <color name="cardview_light_background">#FFFFFF</color>
+
+    <color name="colorDaymain">#ebebeb</color>
+
+    <color name="colortoolbartitle">#ffff</color>
+
+    <color name="ind_red">#8D98FF</color>
+    <color name="blue_light">#8D98FF</color>
+    <color name="material_orange">#8D98FF</color>
+</resources>

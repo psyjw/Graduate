@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/advanced_search_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="?attr/colorPrimary">
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="15dp"
+            android:text="@string/advanced_search_keyword"
+            android:textSize="18sp" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/advanced_search_keyword_input"
+            android:layout_width="273dp"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3dp"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="15dp"
+            android:text="@string/advanced_search_people"
+            android:textSize="18sp" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/advanced_search_people_input"
+            android:layout_width="318dp"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3dp"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="@string/advanced_search_label"
+            android:layout_marginLeft="15dp"
+            android:textSize="18sp" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/advanced_search_label_input"
+            android:layout_width="328dp"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3dp"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="@string/advanced_search_date"
+            android:layout_marginLeft="15dp"
+            android:textSize="18sp" />
+
+        <me.gujun.android.taggroup.TagGroup
+            android:id="@+id/dateTags"
+            style="@style/TagGroup.Large"
+            android:layout_width="310dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            app:atg_backgroundColor="@color/colorFloatingButton"
+            app:atg_borderColor="@color/colorFloatingButton"
+            app:atg_horizontalSpacing="5dp"
+            app:atg_pressedBackgroundColor="@color/colorFloatingButton_press"
+            app:atg_textColor="@color/colortagtext"
+            app:atg_textSize="15sp"
+            app:atg_verticalSpacing="2dp"></me.gujun.android.taggroup.TagGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/advanced_search_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Search" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/search_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

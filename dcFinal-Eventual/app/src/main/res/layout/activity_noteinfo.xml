@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_noteinfo"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:background="?attr/colorPrimary">
+        </android.support.v7.widget.Toolbar>
+
+
+        <com.next.schoolmemory.MyImageView
+            android:id="@+id/noteinfo_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/text_noteinfo_item"
+                            android:padding="15dp"
+                            android:textSize="18sp"
+                            android:lineSpacingExtra="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:clickable="true"
+                            android:enabled="true"
+                            android:textIsSelectable="true"
+                            android:focusable="true"
+                            android:longClickable="true"
+                            android:minHeight="200dp"
+                            android:transitionName="@string/sharedTextView"/>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="People："/>
+
+                <me.gujun.android.taggroup.TagGroup
+                    android:id="@+id/taggroup_noteinfo_people"
+                    style="@style/TagGroup.Large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:clickable="false"
+                    app:atg_backgroundColor="@color/colorFloatingButton"
+                    app:atg_borderColor="@color/colorFloatingButton"
+                    app:atg_checkedBackgroundColor="@color/colorFloatingButton"
+                    app:atg_horizontalSpacing="5dp"
+                    app:atg_pressedBackgroundColor="@color/colorFloatingButton"
+                    app:atg_textColor="@color/colortagtext"
+                    app:atg_textSize="15sp"
+                    android:layout_marginBottom="10dp"
+                    app:atg_verticalSpacing="5dp">
+
+                </me.gujun.android.taggroup.TagGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Tag："/>
+
+                <me.gujun.android.taggroup.TagGroup
+                    android:id="@+id/taggroup_noteinfo_label"
+                    style="@style/TagGroup.Large"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="false"
+                    app:atg_backgroundColor="@color/colorFloatingButton"
+                    app:atg_borderColor="@color/colorFloatingButton"
+                    app:atg_checkedBackgroundColor="@color/colorFloatingButton"
+                    app:atg_horizontalSpacing="5dp"
+                    app:atg_pressedBackgroundColor="@color/colorFloatingButton"
+                    app:atg_textColor="@color/colortagtext"
+                    app:atg_textSize="15sp"
+                    app:atg_verticalSpacing="5dp"></me.gujun.android.taggroup.TagGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Date："/>
+
+                    <TextView
+                        android:id="@+id/noteinfo_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <TextView
+                    android:text=""
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="0dp"/>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+</ScrollView>

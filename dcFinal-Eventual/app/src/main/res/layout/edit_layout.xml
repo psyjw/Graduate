@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_add"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@color/colorFloatingButton"
+            android:elevation="4dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:title=""
+            app:titleTextColor="@color/cardview_light_background">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/add_savefile"
+                style="@style/Zql_theme_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="15dp"
+                android:clickable="true"
+                android:text="@string/add_textview_savefile"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="15sp" />
+        </android.support.v7.widget.Toolbar>
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/add_noteinfoedittext"
+            android:layout_below="@id/toolbar_add"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:gravity="left"
+            android:textSize="17sp"
+            android:lineSpacingExtra="3dp"
+            android:hint="How's your day ?"/>
+        <LinearLayout
+            android:id="@+id/linearlayout_serect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/add_noteinfoedittext">
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/small_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearlayout_serect" />
+
+        <TextView
+            android:id="@+id/people_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/small_image"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="People："
+            android:textSize="17dp" />
+
+        <me.gujun.android.taggroup.TagGroup
+            android:id="@+id/people_group"
+            style="@style/TagGroup.Large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/people_text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            app:atg_backgroundColor="@color/colorFloatingButton"
+            app:atg_borderColor="@color/colorFloatingButton"
+            app:atg_horizontalSpacing="5dp"
+            app:atg_inputHint="添加标签"
+            app:atg_pressedBackgroundColor="@color/colorFloatingButton_press"
+            app:atg_textColor="@color/colortagtext"
+            app:atg_textSize="15sp"
+            app:atg_verticalSpacing="2dp"></me.gujun.android.taggroup.TagGroup>
+
+        <TextView
+            android:id="@+id/label_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/people_group"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Tag："
+            android:textSize="17dp" />
+
+        <me.gujun.android.taggroup.TagGroup
+            android:id="@+id/label_group"
+            style="@style/TagGroup.Large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            app:atg_backgroundColor="@color/colorFloatingButton"
+            app:atg_borderColor="@color/colorFloatingButton"
+            app:atg_horizontalSpacing="5dp"
+            app:atg_inputHint="添加标签"
+            app:atg_pressedBackgroundColor="@color/colorFloatingButton_press"
+            app:atg_textColor="@color/colortagtext"
+            app:atg_textSize="15sp"
+            app:atg_verticalSpacing="2dp"></me.gujun.android.taggroup.TagGroup>
+
+        <TextView
+            android:id="@+id/dateTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/label_group"
+            android:text="Date："
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/mydate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_group"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/dateTitle"
+            android:textSize="17dp" />
+        <LinearLayout
+            android:id="@+id/pic_path_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mydate"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pic_path_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Photo Path："
+                android:textSize="17dp" />
+            <TextView
+                android:id="@+id/pic_path_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                android:text="path"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/location_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pic_path_layout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Location Info："
+                android:layout_marginBottom="10dp"
+                android:textSize="17dp" />
+            <me.gujun.android.taggroup.TagGroup
+                android:id="@+id/taggroup_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+        <com.joaquimley.faboptions.FabOptions
+            android:id="@+id/add_floatingbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            app:background_color="@color/colorFloatingButton"
+            app:fab_color="@color/colorFloatingButton"
+            android:layout_below="@id/location_layout">
+        </com.joaquimley.faboptions.FabOptions>
+    </RelativeLayout>
+</ScrollView>

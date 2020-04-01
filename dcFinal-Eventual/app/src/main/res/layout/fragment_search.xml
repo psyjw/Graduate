@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/search_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="?attr/colorPrimary">
+
+        <TextView
+            android:id="@+id/advanced_search_entrance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:clickable="true"
+            android:text="@string/advanced_button"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="15sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/search_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@+id/search_toolbar">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/search_edittext"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:hint="Type your words"
+            android:lineSpacingExtra="3dp"
+            android:layout_marginRight="15dp"
+            android:textSize="17sp"
+           />
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorfirsr_1"
+            android:text="Search"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_list"
+        android:layout_below="@id/search_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<% if session[:message] %>
+<p style="color: red;"><%= session[:message] %></p>
+<% session[:message] = nil%>
+<% end %>
+
+<br>
+<h1 style="text-align: center;">Please Login</h1>
+<form style="text-align: center;" action="/login" method='post'>
+    Username: <input type='text' name='username'></input><br>
+    <br>
+    Password: <input type='password' name='password'></input><br>
+    <br>
+    <input type='submit' value='Log In'></input>
+</form>

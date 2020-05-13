@@ -1,0 +1,51 @@
+
+<% if session[:message] %>
+<p style="color: red;"><%= session[:message] %></p>
+<% session[:message] = nil%>
+<% end %> 
+
+<h1 style="text-align: center;">Welcome to the Dice Casino</h1>
+<div style="padding-left: 30px; padding-right: 30px; width: 100%; height: 30%">
+    <div style="float: left; width: 50%;">
+        <form action="./bet" method='post'>
+            Place your bet on dice number (1 to 6):<br>
+            <br>
+            Bet Money: <input type='number' name='betMoney' min="1" required="true"></input><br>
+            <br>
+            On: <input type='number' name='betNumber' min="1" max="6" required="true"></input><br>
+            <br>
+            <input type='submit' value='Bet'></input> 
+        </form>                   
+    </div>
+    <div style="float: right; width: 30%; margin-left: 30px;">
+        Total Win:<br>
+        <input type='number' name='sessionWin' disabled="true" value=<%= @sessionwin %>></input><br>
+        Total Loss:<br>
+        <input type='number' name='sessionLoss' disabled="true" value=<%= @sessionloss %>></input><br>
+        Total Profit:<br>
+        <input type='number' name='sessionProfit' disabled="true" value=<%= @sessionprofit %>></input><br>
+    </div>
+</div>
+
+<div style="padding-left: 30px; padding-right: 30px; width: 100%; height: 15%">
+    <div style="float: left; width: 100%; height: 20%">Account:</div>
+    <div style="height: 80%">
+        <div style="float: left; width: 30%;">Total Win:<br>
+            <br>
+            <input type='number' name='totalWin' disabled="true" value=<%= @curuser.win %>></input><br>
+        </div>
+        <div style="float: left; width: 30%;">Total Loss:<br>
+            <br>
+            <input type='number' name='totalLoss' disabled="true" value=<%= @curuser.loss %>></input><br>
+        </div>
+        <div style="float: left; padding-right: 30px; width: 30%;">Total Profit:<br>
+            <br>
+            <input type='number' name='totalProfit' disabled="true" value=<%= @curuser.profit %>></input><br>
+        </div>
+    </div>
+</div>
+<div style="padding-left: 30px; padding-right: 30px; width: 100%; float: left">
+    <br>
+    <br>
+    <a href="/logout"><input type='submit' value='Log Out'></input></a>
+</div>

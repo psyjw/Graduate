@@ -6,6 +6,14 @@ configure do
     enable :sessions
 end
 
+configure :development do
+    DataMapper.setup(:default, "sqlite3://#{Dir,pwd}/gambler.db")
+end
+
+configure :production do
+    DataMapper.setup(:default, ENV['DATABASE_URL'])
+end
+
 get '/' do
     if session[:login] == true
         erb :main
